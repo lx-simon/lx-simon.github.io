@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hexo博客的建设和踩坑 | 沉心写博客的尘朵</title><meta name="keywords" content="blog,themes,butterfly"><meta name="author" content="尘朵"><meta name="copyright" content="尘朵"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Hexo的搭建过程及遇到的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客的建设和踩坑">
+<meta property="og:url" content="http://example.com/2021/03/06/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/index.html">
+<meta property="og:site_name" content="沉心写博客的尘朵">
+<meta property="og:description" content="Hexo的搭建过程及遇到的问题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/1.jpg">
+<meta property="article:published_time" content="2021-03-06T05:23:13.000Z">
+<meta property="article:modified_time" content="2021-05-02T02:57:25.860Z">
+<meta property="article:author" content="尘朵">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="themes">
+<meta property="article:tag" content="butterfly">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/03/06/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-05-02 10:57:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/1.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">沉心写博客的尘朵</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hexo博客的建设和踩坑</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-06T05:23:13.000Z" title="发表于 2021-03-06 13:23:13">2021-03-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-02T02:57:25.860Z" title="更新于 2021-05-02 10:57:25">2021-05-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Hexo%E5%8D%9A%E5%AE%A2%E5%BE%97%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/">Hexo博客得建设和踩坑</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Hexo博客的建设和踩坑"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="创建新的博客"><a href="#创建新的博客" class="headerlink" title="创建新的博客"></a>创建新的博客</h2><blockquote>
+<p>hexo new “新博客名”</p>
+</blockquote>
+<p>如图：<img src="/.com//2.png" alt="创建新博客"></p>
+<h2 id="博客文章内容"><a href="#博客文章内容" class="headerlink" title="博客文章内容"></a>博客文章内容</h2><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>写文章的格式和CSDN类似，照着格式写即可。<br>自己多写几篇就熟悉了<br>**CSDN写文章和hexo写文章<br><img src="/.com//3.png" alt="CSDN写博客格式"><br><img src="/.com//4.jpg" alt="自己写博客样式"></p>
+<h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><p><strong>在你创建博客的根目录</strong><br>在<code>/blog/source/_posts</code>找到<code>博客名.md</code>,直接vi它，即可进入写博客的界面，按照格式写博客即可。</p>
+<h2 id="图片设置"><a href="#图片设置" class="headerlink" title="图片设置"></a>图片设置</h2><h3 id="文章内插入图片"><a href="#文章内插入图片" class="headerlink" title="文章内插入图片"></a>文章内插入图片</h3><ul>
+<li>图片插入格式<blockquote>
+<p><img src="/.com//%E4%BF%9D%E5%AD%98%E5%9C%A8_posts%E5%8D%9A%E5%AE%A2%E5%90%8C%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9B%BE%E7%89%87%E5%90%8D%E7%A7%B0" alt="图片名称"></p>
+</blockquote>
+</li>
+<li>第一步，安装插件，在博客根目录下执行<blockquote>
+<p>npm install –save hexo-asset-image<del>npm install hexo-asset-image –save</del></p>
+</blockquote>
+</li>
+<li>打开根目录博客的配置文件<code>_config.yml</code><blockquote>
+<p>点击<code>Esc</code>,输入<code>/post_asset_folder</code>回车，将false改为true</p>
+</blockquote>
+</li>
+<li>此后创建新的博客在_posts目录下就会有同名的文件夹。<br>！！我配置到此我就能用插入图片了，没有插入其它代码。</li>
+</ul>
+<h3 id="博客文章图片设置"><a href="#博客文章图片设置" class="headerlink" title="博客文章图片设置"></a>博客文章图片设置</h3><p><strong>我的themes是butterfly！！</strong><br>下面会写怎么配置主题。<br>博客开头<code>top_img: 图片路径或者url地址</code>,<code>cover: 图片路径或者url地址</code>。</p>
+<p>**图片路径为：/博客名/图片名 **</p>
+<p><strong>图片要放在同名的文件夹内</strong></p>
+<p>top_img是博客文章内顶部图片，cover是博客主页看到的图片。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 这里是标题</span><br><span class="line">top_img: https://s3.ax1x.com/2021/03/05/6mXiM4.jpg</span><br><span class="line">cover: https://s3.ax1x.com/2021/03/05/6mXiM4.jpg</span><br></pre></td></tr></table></figure>
+<h2 id="themse主题"><a href="#themse主题" class="headerlink" title="themse主题"></a>themse主题</h2><ul>
+<li>这里选用的是butterfly主题</li>
+<li>在博客的根目录下<blockquote>
+<p>git clone -b master <a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes/butterfly<br>如果上面执行不成功，你又没有魔法可以换成：<br><code>git clone -b master https://gitee.com/iamjerryw/hexo-theme-butterfly.git themes/butterfly</code>,注意分支这里是master</p>
+</blockquote>
+</li>
+<li>也可以不执行上面的，直接执行<blockquote>
+<p>npm i hexo-theme-butterfly</p>
+</blockquote>
+</li>
+<li><em>npm安装此只支持Hexo 5.0.0以上版本</em>*</li>
+<li>修改博客根目录下的配置_config.yml</li>
+<li><em>vi后，保持Esc状态，<code>/theme</code>,回车即可直接找到theme</em>*<blockquote>
+<p>theme: butterfly</p>
+</blockquote>
+</li>
+<li>如果你沒有pug以及stylus的渲染器，請下載安裝：<blockquote>
+<p>npm install –save hexo-renderer-pug hexo-renderer-stylus <del>npm install hexo-renderer-pug hexo-renderer-stylus –save</del></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="如果报错模块不存在！！"><a href="#如果报错模块不存在！！" class="headerlink" title="如果报错模块不存在！！"></a>如果报错模块不存在！！</h3><ul>
+<li>将node_module文件夹删掉，重新安装<br>如图(这里看有*号的命令<del>我是删掉lib库里的node_module</del>)：<br><img src="/.com//5.jpg" alt="重新安装"></li>
+<li>将博客根下node_module文件夹删掉重新安装配置。</li>
+<li>*可以看图中命令参考参考**，备份后一切重来也无妨，详见我的第一篇博客。</li>
+</ul>
+<h3 id="默认图片更改。"><a href="#默认图片更改。" class="headerlink" title="默认图片更改。"></a>默认图片更改。</h3><ul>
+<li>默认的cover和top_img<br><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="默认"></li>
+<li>更改默认：<blockquote>
+<p>在博客根目录/themes/butterfly/scripts/filters/random_cover.js<br>vi 进入random_cover.js,找到<code>cover</code>更改为自己喜欢的即可。</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>不过还是自己些博客的时候，在顶部配top_img和cover更好。</strong></p>
+<h3 id="图片路径-img"><a href="#图片路径-img" class="headerlink" title="图片路径/img"></a>图片路径/img</h3><blockquote>
+<p><code>/</code>指的是在该目录source目录下</p>
+</blockquote>
+<h3 id="主页图片的更改"><a href="#主页图片的更改" class="headerlink" title="主页图片的更改"></a>主页图片的更改</h3><ul>
+<li><p>在themes下改配置文件，找到Image，下面的<code>index.img</code>,改成自己喜欢的url或者本地路径(/img/图片名称)</p>
+</li>
+<li><p>*<code>/</code>上面有解释</p>
+</li>
+<li><p>配置文件有注释的，直接看注释就能知道是什么文件。像index.img，首页图片，注释为<code>the banner image of home page</code></p>
+</li>
+</ul>
+<hr>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>目前踩的小坑就这么多了，基本上都通过history记到多少写多少，在网上也查看了许多资料，零零散散的。<br>一些难的配置，自己也没弄多少。这个篇博客就是自己笔记＋经验吧！最后，玩到好玩的就记录下来，期望自己博客越来越好看。</p>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">尘朵</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/03/06/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/">http://example.com/2021/03/06/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">沉心写博客的尘朵</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/blog/">blog</a><a class="post-meta__tags" href="/tags/themes/">themes</a><a class="post-meta__tags" href="/tags/butterfly/">butterfly</a></div><div class="post_share"><div class="social-share" data-image="/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2021/05/02/hexo%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E5%92%8C%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD%E8%BD%AC%E7%A7%BB/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">hexo主题设置和博客备份转移</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/05/02/从零到1搭建hexo博客并部署到gitee/" title="我的第一个博客"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-02</div><div class="title">我的第一个博客</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">尘朵</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.</span> <span class="toc-text">创建新的博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9"><span class="toc-number">2.</span> <span class="toc-text">博客文章内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E6%96%87%E7%AB%A0"><span class="toc-number">2.2.</span> <span class="toc-text">写文章</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">图片设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%86%85%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="toc-number">3.1.</span> <span class="toc-text">文章内插入图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text">博客文章图片设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#themse%E4%B8%BB%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">themse主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%8A%A5%E9%94%99%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%AD%98%E5%9C%A8%EF%BC%81%EF%BC%81"><span class="toc-number">4.1.</span> <span class="toc-text">如果报错模块不存在！！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%9B%BE%E7%89%87%E6%9B%B4%E6%94%B9%E3%80%82"><span class="toc-number">4.2.</span> <span class="toc-text">默认图片更改。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84-img"><span class="toc-number">4.3.</span> <span class="toc-text">图片路径&#x2F;img</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E5%9B%BE%E7%89%87%E7%9A%84%E6%9B%B4%E6%94%B9"><span class="toc-number">4.4.</span> <span class="toc-text">主页图片的更改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-number">5.</span> <span class="toc-text">说明</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/05/02/%E4%BB%8E%E9%9B%B6%E5%88%B01%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0gitee/" title="我的第一个博客"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一个博客"/></a><div class="content"><a class="title" href="/2021/05/02/%E4%BB%8E%E9%9B%B6%E5%88%B01%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0gitee/" title="我的第一个博客">我的第一个博客</a><time datetime="2021-05-02T02:56:47.460Z" title="发表于 2021-05-02 10:56:47">2021-05-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/02/hexo%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E5%92%8C%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD%E8%BD%AC%E7%A7%BB/" title="hexo主题设置和博客备份转移"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo主题设置和博客备份转移"/></a><div class="content"><a class="title" href="/2021/05/02/hexo%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE%E5%92%8C%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD%E8%BD%AC%E7%A7%BB/" title="hexo主题设置和博客备份转移">hexo主题设置和博客备份转移</a><time datetime="2021-05-02T02:56:02.000Z" title="发表于 2021-05-02 10:56:02">2021-05-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/06/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/" title="Hexo博客的建设和踩坑"><img src="/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo博客的建设和踩坑"/></a><div class="content"><a class="title" href="/2021/03/06/Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%B8%A9%E5%9D%91/" title="Hexo博客的建设和踩坑">Hexo博客的建设和踩坑</a><time datetime="2021-03-06T05:23:13.000Z" title="发表于 2021-03-06 13:23:13">2021-03-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 尘朵</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
